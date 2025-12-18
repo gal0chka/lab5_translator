@@ -16,12 +16,12 @@
 
 ## Грамматика
 
-<Expr> ::= <Sum>
-<Sum> ::= <Prod> <SumTail>
-<SumTail> ::= "+" <Prod> <SumTail> | ε
-<Prod> ::= <Atom> <ProdTail>
-<ProdTail> ::= "*" <Atom> <ProdTail> | ε
-<Atom> ::= INT | "pow" "(" <Expr> "," <Expr> ")"
+Expr ::= Sum
+Sum ::= Prod SumTail
+SumTail ::= "+" Prod SumTail | ε
+Prod ::= Atom ProdTail
+ProdTail ::= "*" Atom ProdTail | ε
+Atom ::= INT | "pow" "(" Expr "," Expr ")"
 
 ## Сборка и запуск
 Программа написана на **Python 3**
